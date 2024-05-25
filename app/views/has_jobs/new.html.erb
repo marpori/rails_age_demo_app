@@ -1,0 +1,10 @@
+<h1>New has job</h1>
+
+<!-- # has_jobs_path(@has_job) PUT /has_jobs_path => has_jobs#update -->
+<%= render "form", has_job: @has_job, form_url: has_jobs_path(@has_job) %>
+
+<br>
+
+<div>
+  <%= link_to "Back to has jobs", has_jobs_path %>
+</div>

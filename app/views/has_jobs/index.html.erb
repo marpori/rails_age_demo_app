@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Has jobs</h1>
+
+<div id="has_jobs">
+  <% @has_jobs.each do |has_job| %>
+    <%= render 'has_job', has_job: has_job %>
+    <p>
+      <%= link_to "Show this 'has job'", has_job_path(has_job) %>
+    </p>
+    <p>
+      <%= link_to "Edit this 'has job'", edit_has_job_path(has_job) %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New 'has job'", new_has_job_path %>

@@ -17,5 +17,9 @@ module Nodes
       self.nick_name = first_name unless nick_name.present?
       self.given_name = last_name unless given_name.present?
     end
+
+    def full_name
+      [first_name, last_name].join(' ')
+    end
   end
 end
