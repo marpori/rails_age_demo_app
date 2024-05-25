@@ -69,5 +69,5 @@ group :test do
 end
 
 # gem 'rails_age'
-# gem 'rails_age', path: '../rails_age'
-gem 'rails_age', git: 'https://github.com/marpori/rails_age.git'
+gem 'rails_age', path: '../rails_age'
+# gem 'rails_age', git: 'https://github.com/marpori/rails_age.git'

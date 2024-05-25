@@ -1,6 +1,6 @@
 module Nodes
   class Pet
-    include ApacheAge::Vertex
+    include ApacheAge::Entities::Vertex
 
     attribute :species, :string
     attribute :pet_name, :string
