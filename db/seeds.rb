@@ -2,11 +2,11 @@ fred = Nodes::Person.create(first_name: 'Fredrick Jay', nick_name: 'Fred', last_
 
 quarry = Nodes::Company.create(company_name: 'Bedrock Quarry')
 
-crane = Edges::WorksAt.create(start_node: fred, end_node: quarry, employee_role: 'Crane Operator')
+crane = Edges::HasJob.create(start_node: fred, end_node: quarry, employee_role: 'Crane Operator')
 
 mr_slate = Nodes::Person.create(first_name: 'George', nick_name: 'Mr. Slate', last_name: 'Slate', gender: 'male')
 
-boss = Edges::WorksAt.create(start_node: mr_slate, end_node: quarry, employee_role: 'Manager')
+boss = Edges::HasJob.create(start_node: mr_slate, end_node: quarry, employee_role: 'Manager')
 
 ## Flintstone family
 # agriculture (hillbilly)
@@ -262,7 +262,7 @@ PersonJob.create!(person: pops, job: traffic, start_date: Date.new(1980, 1, 1))
 PersonJob.create!(person: edna, job: homemaker, start_date: Date.new(1980, 1, 1))
 
 # fred - crane operator
-crane = PersonJob.Edges::WorksAt(start_node: fred, end_node: quarry, employee_role: 'Crane Operator')
+crane = PersonJob.Edges::HasJob(start_node: fred, end_node: quarry, employee_role: 'Crane Operator')
 # married to fred
 # wilma - reporter & caterer & homemaker
 PersonJob.create!(person: wilma, job: reporter, start_date: Date.new(1980, 1, 1), end_date: Date.new(1989, 12, 31))

@@ -1,3 +1,9 @@
+PATH
+  remote: ../rails_age
+  specs:
+    rails_age (0.2.0)
+      rails (>= 7.1.3.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -185,8 +191,6 @@ GEM
     rails-html-sanitizer (1.6.0)
       loofah (~> 2.21)
       nokogiri (~> 1.14)
-    rails_age (0.1.0)
-      rails (>= 7.1.3.2)
     railties (7.1.3.3)
       actionpack (= 7.1.3.3)
       activesupport (= 7.1.3.3)
@@ -268,7 +272,7 @@ DEPENDENCIES
   pry-rails
   puma (>= 5.0)
   rails (~> 7.1.3, >= 7.1.3.3)
-  rails_age
+  rails_age!
   redis (>= 4.0.1)
   rspec-rails
   sprockets-rails
