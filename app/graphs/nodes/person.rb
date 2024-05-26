@@ -8,8 +8,11 @@ module Nodes
     attribute :nick_name, :string, default: nil
     attribute :gender, :string, default: nil
 
-    validates :gender, :first_name, :last_name, :given_name, :nick_name,
-              presence: true
+    validates :last_name, :given_name, :gender, presence: true
+    validates_with(
+      ApacheAge::Validators::UniqueVertexValidator,
+      attributes: %i[first_name last_name given_name gender]
+    )
 
     def initialize(**attributes)
       super

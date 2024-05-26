@@ -57,8 +57,6 @@ RSpec.describe Nodes::Person do
 
       it 'is not valid' do
         expect(subject).not_to be_valid
-        expect(subject.errors.messages[:first_name]).to include "can't be blank"
-        expect(subject.errors.messages[:nick_name]).to include "can't be blank"
         expect(subject.errors.messages[:last_name]).to include "can't be blank"
         expect(subject.errors.messages[:given_name]).to include "can't be blank"
         expect(subject.errors.messages[:gender]).to include "can't be blank"
