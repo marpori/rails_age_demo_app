@@ -187,9 +187,6 @@ Edges::HasPet.create(start_node: barney, end_node: hoppy, caregiver_role: 'owner
 
 Edges::HasPet.create(start_node: loudrock, end_node: juliet, caregiver_role: 'owner')
 
-## RELATIONSHIPS
-################
-
 
 ## Companies
 ############
@@ -254,3 +251,9 @@ Edges::HasJob.create(employee_role: 'fire chief', start_node: joe, end_node: fir
 
 # lodge
 Edges::HasJob.create(employee_role: 'The Grand Poobah', start_node: sam, end_node: lodge)
+
+## RELATIONSHIPS
+################
+# children
+# spouses
+# siblings
