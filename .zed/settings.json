@@ -10,5 +10,26 @@
         "formatting": true
       }
     }
+  },
+  "language_overrides": {
+    "Ruby": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "bundle",
+          "arguments": [
+            "exec",
+            "rubocop",
+            "--server",
+            "--fail-level",
+            "error",
+            "--autocorrect",
+            "--stdin",
+            "corrected.rb",
+            "--stderr"
+          ]
+        }
+      }
+    }
   }
 }
