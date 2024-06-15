@@ -10,7 +10,7 @@ module Nodes
 
     validates :last_name, :given_name, :gender, presence: true
     validates_with(
-      ApacheAge::Validators::UniqueVertexValidator,
+      ApacheAge::Validators::UniqueVertex,
       attributes: %i[first_name last_name given_name gender]
     )
 

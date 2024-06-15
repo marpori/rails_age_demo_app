@@ -8,7 +8,7 @@ module Nodes
 
     validates :species, :pet_name, presence: true
     validates_with(
-      ApacheAge::Validators::UniqueVertexValidator,
+      ApacheAge::Validators::UniqueVertex,
       attributes: %i[species pet_name]
     )
   end

@@ -8,7 +8,7 @@ module Edges
 
     validates :parental_role, presence: true
     validates_with(
-      ApacheAge::Validators::UniqueEdgeValidator,
+      ApacheAge::Validators::UniqueEdge,
       attributes: %i[parental_role start_node end_node]
     )
   end

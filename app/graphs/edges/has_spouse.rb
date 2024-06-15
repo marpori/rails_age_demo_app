@@ -8,7 +8,7 @@ module Edges
 
     validates :spousal_role, presence: true
     validates_with(
-      ApacheAge::Validators::UniqueEdgeValidator,
+      ApacheAge::Validators::UniqueEdge,
       attributes: %i[spousal_role start_node end_node]
     )
   end
