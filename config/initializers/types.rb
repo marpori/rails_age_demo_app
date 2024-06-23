@@ -1,32 +1,32 @@
-require 'apache_age/types/age_type_generator'
+require 'apache_age/types/factory'
 # USAGE (with edges or nodes) - ie:
 # require_dependency 'nodes/company'
 # ActiveModel::Type.register(
-#   :company, ApacheAge::Types::AgeTypeGenerator.create_type_for(Nodes::Company)
+#   :company, ApacheAge::Types::Factory.create_type_for(Nodes::Company)
 # )
 
 Rails.application.config.to_prepare do
   # Register AGE types
-  require_dependency 'apache_age/entities/vertex'
+  require_dependency 'apache_age/node'
   ActiveModel::Type.register(
-    :vertex, ApacheAge::Types::AgeTypeGenerator.create_type_for(ApacheAge::Entities::Vertex)
+    :node, ApacheAge::Types::Factory.create_type_for(ApacheAge::Node)
   )
-  require_dependency 'apache_age/entities/edge'
+  require_dependency 'apache_age/edge'
   ActiveModel::Type.register(
-    :edge, ApacheAge::Types::AgeTypeGenerator.create_type_for(ApacheAge::Entities::Edge)
+    :edge, ApacheAge::Types::Factory.create_type_for(ApacheAge::Edge)
   )
 
   # Register the custom types
   require_dependency 'nodes/company'
   ActiveModel::Type.register(
-    :company, ApacheAge::Types::AgeTypeGenerator.create_type_for(Nodes::Company)
+    :company, ApacheAge::Types::Factory.create_type_for(Nodes::Company)
   )
   require_dependency 'nodes/person'
   ActiveModel::Type.register(
-    :person, ApacheAge::Types::AgeTypeGenerator.create_type_for(Nodes::Person)
+    :person, ApacheAge::Types::Factory.create_type_for(Nodes::Person)
   )
   require_dependency 'nodes/pet'
   ActiveModel::Type.register(
-    :pet, ApacheAge::Types::AgeTypeGenerator.create_type_for(Nodes::Pet)
+    :pet, ApacheAge::Types::Factory.create_type_for(Nodes::Pet)
   )
 end

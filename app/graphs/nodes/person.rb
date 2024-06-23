@@ -1,6 +1,6 @@
 module Nodes
   class Person
-    include ApacheAge::Entities::Vertex
+    include ApacheAge::Entities::Node
 
     attribute :first_name, :string, default: nil
     attribute :last_name, :string, default: nil
@@ -10,7 +10,7 @@ module Nodes
 
     validates :last_name, :given_name, :gender, presence: true
     validates_with(
-      ApacheAge::Validators::UniqueVertex,
+      ApacheAge::Validators::UniqueNode,
       attributes: %i[first_name last_name given_name gender]
     )
 

@@ -13,7 +13,7 @@
 
   <div>
     <%= form.label :start_node, style: "display: block" %>
-    <%= form.collection_select(:start_id, Nodes::Person.all, :id, :full_name, prompt: 'Select a person') %>
+    <%= form.collection_select(:start_id, ApacheAge::Entity::Node.all, :id, :full_name, prompt: 'Select a person') %>
   </div>
 
   <div>
